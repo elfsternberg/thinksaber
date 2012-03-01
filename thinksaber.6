@@ -1,0 +1,135 @@
+'\" t
+.\" Manual page created with latex2man on Sun Jul 13 17:08:40 PDT 2008
+.\" NOTE: This file is generated, DO NOT EDIT.
+.de Vb
+.ft CW
+.nf
+..
+.de Ve
+.ft R
+
+.fi
+..
+.TH "THINKSABER" "1" "2008/07/09" "Games " "Games "
+.SH NAME
+
+Thinksaber
+\- Turn your Lenovo Thinkpad into a Jedi weapon! 
+.PP
+.SH SYNOPSIS
+
+.PP
+thinksaber
+[\fB\-s\fP\fI directory\fP]
+[\fB\-v\fP\fI volume\fP]
+[\fB\-h\fP]
+.PP
+.SH DESCRIPTION
+
+Thinksaber
+uses the accelerometer on a standard late\-model IBM 
+and Lenovo Thinkpads (T40s and up) to detect motion and simulate the 
+sound effects of a Jedi Lightsaber. 
+.PP
+.SH OPTIONS
+
+.PP
+.TP
+\fB\-p\fP\fI path\fP
+ Specify path to soundfiles if not 
+installed in the default location. 
+.TP
+\fB\-s\fP\fI swing\fP
+ Specify the threshold to cause a \&'swing\&' sound 
+.TP
+\fB\-t\fP\fI strike\fP
+ Specify the threshold to cause a \&'strike\&' sound 
+.TP
+\fB\-h\fP\fI hit\fP
+ Specify the threshold to cause a \&'hit\&' sound 
+.TP
+\fB\-u\fP
+ Show help text. 
+.TP
+\fB\-v\fP
+ Show version information. 
+.PP
+.SH REQUIREMENTS
+
+.PP
+.TP
+An IBM or Lenovo Thinkpad with HDAPS 
+thinksaber
+only 
+runs on laptops with accelerometers, which get their values through 
+the HDAPS joystick emulator. 
+.PP
+.TP
+PyGame 
+thinksaber
+uses the PyGame library 
+(www.pygame.org), which in turn has dependencies on the Simple 
+Direct Layer gaming library as well as Python. Most Linux 
+distributions either come with this stock or provide it through the 
+installation tool. Pygame is a dependency of a number of popular 
+Linux games, so if you have any games on your system it\&'s entirely 
+likely this has already been done for you. 
+.PP
+.TP
+Make 
+If you want to install the system with the distributed 
+Makefile,
+you need GNU\-make\&.
+If you don\&'t have it, you 
+should execute the steps shown in the Makefile
+manually. 
+.PP
+.SH ACKNOWLEDGEMENTS
+
+.PP
+Thinksaber
+is obviously inspired by the program MacSaber, and I\&'m 
+grateful to the MacSaber people for assembling the Star Wars sound 
+effects collection needed to make it so successful. 
+.PP
+Thinksaber
+uses a motion\-detection algorithm derived from the 
+one written by Tatsuhiko Miyagawa (miyagawa at gmail.com) for his own 
+thinkpad\-saber
+program, which ran only under Perl for Windows. 
+Obviously, I think mine\&'s better. 
+.PP
+.SH CHANGES
+
+Please check the file \fBCHANGES\fP
+for the list of changes. 
+.PP
+.SH VERSION
+
+.PP
+Version: 0.2 of 2008/07/09\&.
+.PP
+.SH LICENSE AND COPYRIGHT
+
+.PP
+.TP
+Copyright 
+(C)2008, Elf M. Sternberg, 
+\fBElf.Sternberg@gmail.com\fP
+.PP
+.TP
+License 
+This program can be redistributed and/or modified under 
+the terms of the GNU Public License, version 2. You should have 
+found a copy of this licence with this distribution in the file 
+COPYING\&.
+.PP
+.SH AUTHOR
+
+.PP
+Elf M. Sternberg 
+Email: \fBElf.Sternberg@gmail.com\fP
+.br
+WWW: \fBhttp://www.elfsternberg.com\fP\&.
+.PP
+.\" NOTE: This file is generated, DO NOT EDIT.

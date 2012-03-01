@@ -1,0 +1,26 @@
+2008-07-14 15:30  elfsternberg
+
+        * thinksaber.py: Added a device reader for applesmc
+
+2008-07-14 00:17  elfsternberg
+
+	* thinksaber.6, thinksaber.tex: Updated the LaTeX man page, and
+	  generated the man page associated with it.
+
+2008-07-14 00:16  elfsternberg
+
+	* thinksaber.py: Added some important command line options and
+	  fixed a bug with isdir(), so the path= option performs
+	  correctly. Added the usage() function. Added copyright
+	  comments to the top of the program as needed. Updated the
+	  version information.
+
+2008-07-13 23:22  elfsternberg
+
+	* ., AUTHORS, COPYING, ChangeLog, INSTALL, README, hit0.wav,
+	  hit1.wav, hit2.wav, hit3.wav, hit4.wav, idle0.wav, idle1.wav,
+	  off0.wav, on0.wav, start0.wav, strike0.wav, strike1.wav,
+	  strike2.wav, swing0.wav, swing1.wav, swing2.wav, swing3.wav,
+	  swing4.wav, swing5.wav, swing6.wav, swing7.wav, thinksaber.6,
+	  thinksaber.lsm, thinksaber.py, thinksaber.tex: Initial import
+

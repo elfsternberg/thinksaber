@@ -1,0 +1,130 @@
+\documentclass[english]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{babel}
+\usepackage{verbatim}
+
+%% do we have the `hyperref package?
+\IfFileExists{hyperref.sty}{
+   \usepackage[bookmarksopen,bookmarksnumbered]{hyperref}
+}{}
+
+%% do we have the `fancyhdr' package?
+\IfFileExists{fancyhdr.sty}{
+\usepackage[fancyhdr]{latex2man}
+}{
+%% do we have the `fancyheadings' package?
+\IfFileExists{fancyheadings.sty}{
+\usepackage[fancy]{latex2man}
+}{
+\usepackage[nofancy]{latex2man}
+\message{no fancyhdr or fancyheadings package present, discard it}
+}}
+
+\setDate{2008/07/09}    %%%% must be manually set, if rcsinfo is not present
+\setVersionWord{Version:}  %%% that's the default, no need to set it.
+\setVersion{0.2}
+
+\begin{document}
+
+\begin{Name}{1}{thinksaber}{Elf M. Sternberg}{Games}{ThinkSaber - Turn your Thinkpad into a Lightsaber}
+  \Prog{Thinksaber} - Turn your Lenovo Thinkpad into a Jedi weapon!
+\end{Name}
+
+\section{Synopsis}
+%%%%%%%%%%%%%%%%%%
+
+\Prog{thinksaber} \oOptArg{-s}{ directory}
+                  \oOptArg{-v}{ volume}
+                  \oOpt{-h}
+
+\section{Description}
+%%%%%%%%%%%%%%%%%%%%%
+\Prog{Thinksaber} uses the accelerometer on a standard late-model IBM
+and Lenovo Thinkpads (T40s and up) to detect motion and simulate the
+sound effects of a Jedi Lightsaber.  
+
+\section{Options}
+%%%%%%%%%%%%%%%%%
+\begin{Description}[\OptArg{-p}{ path}]\setlength{\itemsep}{0cm}
+
+\item[\OptArg{-p}{ path}]Specify path to soundfiles if not
+  installed in the default location.
+\item[\OptArg{-s}{ swing}]Specify the threshold to cause a 'swing' sound
+\item[\OptArg{-t}{ strike}]Specify the threshold to cause a 'strike' sound
+\item[\OptArg{-h}{ hit}]Specify the threshold to cause a 'hit' sound
+\item[\Opt{-u}]Show help text.
+\item[\Opt{-v}]Show version information.
+
+\end{Description}
+
+\section{Requirements}
+%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{description}\setlength{\itemsep}{0cm}
+\item[An IBM or Lenovo Thinkpad with HDAPS] \Prog{thinksaber} only
+  runs on laptops with accelerometers, which get their values through
+  the HDAPS joystick emulator.
+
+\item[PyGame] \Prog{thinksaber} uses the PyGame library
+  (www.pygame.org), which in turn has dependencies on the Simple
+  Direct Layer gaming library as well as Python.  Most Linux
+  distributions either come with this stock or provide it through the
+  installation tool.  Pygame is a dependency of a number of popular
+  Linux games, so if you have any games on your system it's entirely
+  likely this has already been done for you.
+
+\item[Make] If you want to install the system with the distributed
+     \File{Makefile}, you need GNU-\Prog{make}. If you don't have it, you
+     should execute the steps shown in the \File{Makefile} manually.
+
+\end{description}
+
+\section{Acknowledgements}
+%%%%%%%%%%%%%%%%%%%%%%
+
+\Prog{Thinksaber} is obviously inspired by the program MacSaber, and I'm
+grateful to the MacSaber people for assembling the Star Wars sound
+effects collection needed to make it so successful.
+
+\Prog{Thinksaber} uses a motion-detection algorithm derived from the
+one written by Tatsuhiko Miyagawa (miyagawa at gmail.com) for his own
+\Prog{thinkpad-saber} program, which ran only under Perl for Windows.
+Obviously, I think mine's better.
+
+\section{Changes}
+%@% IF LATEX %@%
+{\small\verbatiminput{CHANGES}}
+%@% ELSE %@%
+Please check the file \URL{CHANGES} for the list of changes.
+%@% END-IF %@%
+
+\section{Version}
+%%%%%%%%%%%%%%%%%
+
+Version: \Version\ of \Date.
+
+\section{License and Copyright}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{description}
+\item[Copyright] \copyright\ 2008, Elf M. Sternberg,
+     \Email{Elf.Sternberg@gmail.com}
+
+\item[License] This program can be redistributed and/or modified under
+  the terms of the GNU Public License, version 2.  You should have
+  found a copy of this licence with this distribution in the file
+  \File{COPYING}.
+
+\end{description}
+
+\section{Author}
+%%%%%%%%%%%%%%%%
+
+\noindent
+Elf M. Sternberg
+Email: \Email{Elf.Sternberg@gmail.com}  \\
+WWW: \URL{http://www.elfsternberg.com}.
+
+\LatexManEnd
+
+\end{document}
